@@ -1,0 +1,61 @@
+.toolbar {
+    background: black;
+}
+
+.brand-title {
+    color: #ffffff;
+    text-align: center;
+    font-size: 25px;
+}
+
+.body {
+    margin-top: 5%;
+}
+.product-name-field {
+    margin-top: 20%;
+}
+
+
+.product-name-value {
+    color: black;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.price-field {
+    margin-top: 5%;
+}
+
+.price-value {
+    color: #1d1b1b;
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+.details-button {
+    margin-top: 20%;
+    cursor: pointer;
+}
+
+.details-link {
+    text-decoration: none;
+    padding: 10px 25px;
+    box-shadow: 2px 2px 2px 2px rgb(93, 197, 211)
+}
+
+.filter-text {
+    font-size: 25px;
+    border-bottom: 2px solid black;
+}
+
+.categories-filter,
+.brands-filter,
+.features-filter {
+    border: 2px solid rgb(145, 143, 143);
+    margin-left: 2%;
+    border-radius: 12px;
+}
+
+.filter-labels {
+    font-size: 20px;
+}

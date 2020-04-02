@@ -1,0 +1,70 @@
+<div class="p-grid toolbar">
+  <div class="p-col-3 p-sm-12 p-md-3 p-lg-3 p-xl-3 brand-title">Baton</div>
+  <div class="p-col-9 p-sm-12 p-md-9 p-lg-9 p-xl-9">
+    <p-autoComplete class="product-search-box" [(ngModel)]="productSearched" [suggestions]="searchSuggestionList"
+      field="name" placeholder='Search For Products' (completeMethod)="getSearchSuggestions($event)"
+      (onSelect)="filterOnSearch()" (onClear)="resetSearch()">
+    </p-autoComplete>
+  </div>
+</div>
+<div class="p-grid body" *ngIf='areAllDataFetched && !isDetailedView'>
+  <div class="p-col-12 p-md-3 p-lg-3 p-xl-3 p-grid">
+    <div class="p-col-12 filter-text">Apply Filters</div>
+    <div class="p-col-12">
+      <h4 class="filter-labels">Categories</h4>
+      <div class="categories-filter p-grid">
+        <p-checkbox class="p-col-12 filter-checkboxes" *ngFor='let caty of categories' value="{{caty.id}}"
+          [(ngModel)]="categoriesSelected" label="{{caty.name}}" (onChange)="startFiltering()"></p-checkbox>
+      </div>
+    </div>
+    <div class="p-col-12 ">
+      <h4 class="filter-labels">Brand</h4>
+      <div class="brands-filter p-grid">
+        <p-checkbox class="p-col-12 filter-checkboxes" *ngFor='let item of brands' value="{{item.id}}"
+          [(ngModel)]="brandsSelected" label="{{item.name}}" (onChange)="startFiltering()"></p-checkbox>
+      </div>
+    </div>
+    <div class="p-col-12">
+      <h4 class="filter-labels">Features</h4>
+      <div class="features-filter p-grid">
+        <p-checkbox class="p-col-12 filter-checkboxes" *ngFor='let ftr of features' value="{{ftr.id}}"
+          [(ngModel)]="featuresSelected" label="{{ftr.name}}" (onChange)="startFiltering()"></p-checkbox>
+      </div>
+    </div>
+  </div>
+  <div class="p-col-12 p-md-9 p-lg-9 p-xl-9 p-grid" *ngIf="!isFilteredResultEmpty">
+    <p-card *ngFor='let product of filteredProductList' class="p-col-12 p-md-4 p-lg-4 p-xl-4 product-card">
+      <div class="p-grid" style="text-align: center">
+        <div>
+          <img src="../../../assets/images/EOS-700D-PRODUCT.jpg" style="width:100%">
+        </div>
+        <div class="product-name-field p-col-12">
+          <span class="product-name-value">{{product.name}}</span>
+        </div>
+        <div class="price-field p-col-12">
+          <span class="price-value">{{product.price}}</span><span style="color: rgb(0, 119, 167)"> $</span>
+        </div>
+        <div class="details-button p-col-12">
+          <a (click)="showDetails(product)" class="details-link">See Details</a>
+        </div>
+      </div>
+    </p-card>
+  </div>
+  <div class="p-col-9 p-grid" *ngIf="isFilteredResultEmpty">
+    <p-card class="p-col-6 p-offset-3 no-product-found-card">
+      No Products Found
+    </p-card>
+  </div>
+</div>
+<div class="p-grid p-align-center" *ngIf='isDetailedView && selectedProduct !== undefined'>
+  <p-card class="p-col-8 p-offset-2 p-grid product-details-card">
+    <div class="p-col-12">
+      <img src="../../../assets/images/EOS-700D-PRODUCT.jpg">
+    </div>
+    <div class="p-col-12 p-grid">
+      <div class="p-col-12">{{selectedProduct.name}} </div>
+      <div class="p-col-12">{{selectedProduct.description}} </div>
+      <div class="p-col-12">{{selectedProduct.price}}<span style="color: rgb(0, 119, 167)"> $</span> </div>
+    </div>
+  </p-card>
+</div>

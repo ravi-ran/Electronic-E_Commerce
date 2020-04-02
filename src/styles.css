@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+
+.product-search-box .ui-autocomplete .ui-autocomplete-input {
+  width: 500px;
+}
+
+.filter-checkboxes .ui-chkbox .ui-chkbox-box.ui-state-active,
+.ui-chkbox .ui-chkbox-box.ui-state-active:not(.ui-state-disabled):hover {
+  border-color: #313131 !important;
+  background-color: #646668 !important;
+  color: #ffffff;
+}
+
+.product-details-card .ui-card {
+    margin-top: 10%;
+}
+
+.no-product-found-card .ui-card{
+    box-shadow: 2px 2px 2px 2px lightskyblue;
+    font-size: 20px;
+    text-align: center;
+}
