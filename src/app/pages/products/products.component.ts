@@ -23,6 +23,7 @@ export class ProductsComponent implements OnInit {
   public isDetailedView: boolean;
   public selectedProduct: Product;
   public isFilteredResultEmpty: boolean;
+  public carousel = [];
   constructor(
     private productService: ProductService
   ) {
@@ -36,6 +37,7 @@ export class ProductsComponent implements OnInit {
     this.getCategories();
     this.isDetailedView = false;
     this.isFilteredResultEmpty = false;
+    this.carousel = ["../../../assets/images/DSLR_Camera_REMIX_By_DG-RA.svg", "../../../assets/images/EOS-700D-PRODUCT.jpg"];
   }
 
   /**
@@ -367,6 +369,10 @@ export class ProductsComponent implements OnInit {
   showDetails(product: Product) {
     this.selectedProduct = product;
     this.isDetailedView = true;
+  }
+
+  backToList() {
+    this.isDetailedView = false;
   }
 }
 

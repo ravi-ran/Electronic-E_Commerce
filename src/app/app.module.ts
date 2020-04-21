@@ -8,6 +8,7 @@ import { CardModule } from 'primeng/card';
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { FormsModule } from '@angular/forms';
 import {CheckboxModule} from 'primeng/checkbox';
+import {CarouselModule} from 'primeng/carousel';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,6 +25,7 @@ import { ProductsComponent } from './pages/products/products.component';
     BrowserModule,
     AppRoutingModule,
     CardModule,
+    CarouselModule,
     AutoCompleteModule,
     FormsModule,
     HttpClientModule,
