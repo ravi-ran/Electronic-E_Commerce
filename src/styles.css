@@ -25,3 +25,11 @@
   height: 100%;
   background: #232222;
 }
+
+.product-carousel .ui-carousel .ui-carousel-dots-container .ui-carousel-dot-item.ui-state-highlight .ui-carousel-dot-icon {
+  background-color: #b6010a !important;
+}
+
+.product-carousel .ui-button:enabled:focus {
+  box-shadow: none !important;
+}
