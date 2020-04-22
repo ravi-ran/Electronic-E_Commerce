@@ -6,9 +6,9 @@
 
 .filter-checkboxes .ui-chkbox .ui-chkbox-box.ui-state-active,
 .ui-chkbox .ui-chkbox-box.ui-state-active:not(.ui-state-disabled):hover {
-  border-color: #313131 !important;
-  background-color: #646668 !important;
-  color: #ffffff;
+  border-color: #b6010a !important;
+  background-color: #b6010a !important;
+  color: #232222 !important;
 }
 
 .product-details-card .ui-card {
