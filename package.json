@@ -20,7 +20,7 @@
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
     "core-js": "^2.5.4",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "ng-http-loader": "^5.1.0",
     "primeflex": "^1.0.0",
     "primeicons": "^2.0.0",
